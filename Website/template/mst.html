@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<title>Minimum Spanning Tree</title>
+</head>
+<body >
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="mst-finder">Minimum Spanning Tree</a></li>
+			<li><a href="bubble-sort">Bubble Sort</a></li>
+			<li><a href="">Quick Sort</a></li>
+			<li><a href="">Bin Packing</a></li>
+		</ul>
+	</nav>
+	<main class="mst-main">
+		<h1>Minimum Spanning Tree Finder</h1>
+		<p>Add all the edges in the graph to find the minimum spanning tree.</p>
+		<div class="flexbox-container">
+			<div class="input-form">
+			
+				<form method="POST" action="/mst-finder">
+					<div class="flexbox-container">
+						<div>
+							<label for="edge">Enter the edge (e.g. AB): </label><br>
+							<input type="text" name="edge"><br>
+						</div>
+						<div>
+							<label for="edge_weight">Enter the edge weight (e.g. 34): </label><br>
+							<input name="edge_weight"><br>
+						</div>
+					</div>
+					<br>
+					<div class="flexbox-container">
+						<input type="submit" name="action" value="Add Edge">
+						<input type="submit" name="action" value="Reset">
+						<input type="submit" name="action" value="Find">
+					</div>
+				</form>
+			</div>
+			<p style="color: red">{{ error }}</p>
+			<div class="mst-io">
+				<h3>{{ output_type }}</h3>
+				<p>{{ output }}</p>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p>Timothy Tay © 2022</p>
+	</footer>
+	<canvas class="background"></canvas>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+	<script>
+		window.onload = function() {
+			Particles.init({
+				selector: '.background',
+				connectParticles: true,
+				color: "#FFFFFF",
+
+				
+			});
+		};
+	</script>
+</body>
+</html>

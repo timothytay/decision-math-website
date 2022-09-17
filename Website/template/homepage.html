@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<title>Decision Math Calculator</title>
+</head>
+<body >
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="mst-finder">Minimum Spanning Tree</a></li>
+			<li><a href="bubble-sort">Bubble Sort</a></li>
+			<li><a href="">Quick Sort</a></li>
+			<li><a href="">Bin Packing</a></li>
+		</ul>
+	</nav>
+	<main>
+		<h1>Decision Maths <span class="highlight">Demystified</span></h1><br>
+		<div class="homepage-flexbox">
+			<a href="mst-finder"><button class="homepage-button">Minimum Spanning Tree</button></a><br>
+			<a href="/"><button class="homepage-button">Bubble Sort</button></a><br>
+			<a href="/"><button class="homepage-button">Quick Sort</button></a><br>
+			<a href="/"><button class="homepage-button">Bin Packing</button></a>
+		</div>
+		<br>
+		<h2>Step By Step <span class="highlight">Solutions</span> To Help You Understand.</h2>
+	</main>
+	<footer>
+		<p>Timothy Tay © 2022</p>
+		<a href="mailto:support@decisionmaths.com">support@decisionmaths.com</a>
+	</footer>
+	<canvas class="background"></canvas>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+	<script>
+		window.onload = function() {
+			Particles.init({
+				selector: '.background',
+				color: '#FFFFFF',
+				connectParticles: true,
+			});
+		};
+	</script>
+</body>
+</html>
